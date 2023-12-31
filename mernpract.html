@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practise</title>
+</head>
+<body>
+    <h1 id="new">Percentage Profit Calculator</h1>
+    <div>
+        <form onsubmit="calc(); return false;">
+            <label for="sp">Sale price</label>
+            <input type="number" name="sp" id="sp1">
+            <label for="pp">Purchase Price</label>
+            <input type="number" name="pp" id="pp1">
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+    <script>
+        function calc(){
+            sale_p=document.querySelector("#sp1").value;
+            purch_p=document.querySelector("#pp1").value;
+            res=((sale_p/purch_p)*100);
+            res1=res-100
+            console.log(`your profit is ${res1} % `)
+            document.querySelector("#new").innerHTML=(`your profit is ${res1} % `)
+        }
+    </script>
+</body>
+</html>
